@@ -7,10 +7,7 @@ $username\
 $hostname\
 [░▒▓](bg:overlay0 fg:lavender)\
 $directory\
-[▒█](bg:lavender fg:blue)\
-$git_branch\
-$git_status\
-[▒█](bg:blue fg:sky)\
+[▒█](bg:lavender fg:sky)\
 $c\
 $conda\
 $dart\
@@ -35,7 +32,15 @@ $scala\
 $package\
 [▒█](bg:sky fg:teal)\
 $cmd_duration\
-[▛](bg:#000 fg:teal)
+[▛](bg:#000 fg:teal)\
+(
+[░▒▓](overlay0)\
+[ ](bg:overlay0 fg:text)\
+[░▒▓](bg:overlay0 fg:rosewater)\
+$git_branch\
+[▒█](bg:rosewater fg:flamingo)\
+$git_status\
+[▛](bg:#000 fg:flamingo))
 [░▒▓](overlay0)\
 $status\
 [▛](overlay0) \
@@ -113,11 +118,11 @@ read_only = " 󰌾"
 
 [git_branch]
 symbol = ""
-style = "bg:blue fg:base"
+style = "bg:rosewater fg:base"
 format = '[$symbol $branch ]($style)'
 
 [git_status]
-style = "bg:blue fg:base"
+style = "bg:flamingo fg:base"
 format = '[$all_status$ahead_behind ]($style)'
 
 [c]
