@@ -4,6 +4,7 @@ format = """
 [░▒▓](overlay0)\
 $os\
 $username\
+$sudo\
 $hostname\
 [░▒▓](bg:overlay0 fg:lavender)\
 $directory\
@@ -35,7 +36,7 @@ $cmd_duration\
 [▛](bg:#000 fg:teal)\
 (
 [░▒▓](overlay0)\
-[ ](bg:overlay0 fg:text)\
+[ $git_metrics](bg:overlay0 fg:text)\
 [░▒▓](bg:overlay0 fg:rosewater)\
 $git_branch\
 [▒█](bg:rosewater fg:flamingo)\
@@ -103,6 +104,12 @@ Ubuntu = " "
 Unknown = " "
 Windows = "󰍲 "
 
+[sudo]
+style = 'bold pink'
+symbol = ''
+disabled = false
+allow_windows = true
+
 [directory]
 style = "bg:lavender fg:base"
 format = "[$path ]($style)"
@@ -123,7 +130,24 @@ format = '[$symbol $branch ]($style)'
 
 [git_status]
 style = "bg:flamingo fg:base"
+conflicted = '󰞇'
+up_to_date = ''
+untracked = ''
+stashed = ''
+modified = '󱓥'
+staged = '[󱫉\($count\)](basen)'
+renamed = ''
+deleted = ''
+ahead = '${count}'
+diverged = '${ahead_count}${behind_count}'
+behind = '${count}'
 format = '[$all_status$ahead_behind ]($style)'
+
+[git_metrics]
+disabled = false
+deleted_style = "bg:overlay0 fg:red"
+added_style = "bg:overlay0 fg:green"
+format = '([$added]($added_style))([$deleted]($deleted_style) )'
 
 [c]
 symbol = " "
