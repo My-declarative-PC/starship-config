@@ -105,7 +105,7 @@ Unknown = " "
 Windows = "󰍲 "
 
 [sudo]
-style = 'bold pink'
+style = 'bg:overlay0 fg:pink bold'
 symbol = ''
 disabled = false
 allow_windows = true
@@ -124,7 +124,7 @@ read_only = " 󰌾"
 "Pictures" = " "
 
 [git_branch]
-symbol = ""
+symbol = ""
 style = "bg:rosewater fg:base"
 format = '[$symbol $branch ]($style)'
 
@@ -273,7 +273,7 @@ disabled = false
 style = "bg:overlay0 fg:base"
 symbol = '[󰚌](bg:overlay0 fg:red)'
 success_symbol = '[󰮭](bg:overlay0 fg:green)'
-format = '[$symbol]($style)'
+format = '[$symbol ]($style)'
 
 [palettes.catppuccin_mocha]
 rosewater = "#f5e0dc"
