@@ -43,7 +43,7 @@ $git_branch\
 $git_status\
 [▛](bg:#000 fg:flamingo))
 [░▒▓](overlay0)\
-$status\
+[$status ($shell)](bg:overlay0)\
 [▛](overlay0) \
 """
 [username]
@@ -274,6 +274,15 @@ style = "bg:overlay0 fg:base"
 symbol = '[󰚌](bg:overlay0 fg:red)'
 success_symbol = '[󰮭](bg:overlay0 fg:green)'
 format = '[$symbol ]($style)'
+
+[shell]
+style = "bg:overlay0 fg:base"
+cmd_indicator = ""
+bash_indicator = ""
+fish_indicator = "󰈺"
+powershell_indicator = "󰨊"
+unknown_indicator = "󰦎"
+disabled = false
 
 [palettes.catppuccin_mocha]
 rosewater = "#f5e0dc"
