@@ -276,12 +276,12 @@ success_symbol = '[󰮭](bg:overlay0 fg:green)'
 format = '[$symbol ]($style)'
 
 [shell]
-style = "bg:overlay0 fg:base"
-cmd_indicator = ""
-bash_indicator = ""
-fish_indicator = "󰈺"
-powershell_indicator = "󰨊"
-unknown_indicator = "󰦎"
+style = "bg:overlay0"
+cmd_indicator = "[](bg:overlay0 fg:yellow)"
+bash_indicator = "[](bg:overlay0 fg:green)"
+fish_indicator = "[󰈺](bg:overlay0 fg:teal)"
+powershell_indicator = "[󰨊](bg:overlay0 fg:blue)"
+unknown_indicator = "[](bg:overlay0 fg:red)"
 disabled = false
 
 [palettes.catppuccin_mocha]
