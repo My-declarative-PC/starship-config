@@ -280,6 +280,7 @@ style = "bg:overlay0"
 cmd_indicator = "[](bg:overlay0 fg:yellow)"
 bash_indicator = "[](bg:overlay0 fg:green)"
 fish_indicator = "[󰈺](bg:overlay0 fg:teal)"
+nu_indicator = "[󰫻󰬂](bg:overlay0 fg:green)"
 powershell_indicator = "[󰨊](bg:overlay0 fg:blue)"
 unknown_indicator = "[](bg:overlay0 fg:red)"
 disabled = false
