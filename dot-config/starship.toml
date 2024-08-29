@@ -1,15 +1,15 @@
 # Use the color palette
-palette = "dracula"
+palette = "catppuccin_mocha"
 
 format = """
-[░▒▓](current_line)\
+[░▒▓](overlay0)\
 $os\
 $username\
 $sudo\
 $hostname\
-[░▒▓](bg:current_line fg:purple)\
+[░▒▓](bg:overlay0 fg:lavender)\
 $directory\
-[▒█](bg:purple fg:cyan)\
+[▒█](bg:lavender fg:sky)\
 $c\
 $conda\
 $dart\
@@ -32,37 +32,37 @@ $rust\
 $php\
 $scala\
 $package\
-[▒█](bg:cyan fg:comment)\
+[▒█](bg:sky fg:teal)\
 $cmd_duration\
-[▛](bg:#000 fg:comment)\
+[▛](bg:#000 fg:teal)\
 (
-[░▒▓](current_line)\
-[ $git_metrics](bg:current_line fg:foreground)\
-[░▒▓](bg:current_line fg:orange)\
+[░▒▓](overlay0)\
+[ $git_metrics](bg:overlay0 fg:text)\
+[░▒▓](bg:overlay0 fg:rosewater)\
 $git_branch\
-[▒█](bg:orange fg:pink)\
+[▒█](bg:rosewater fg:flamingo)\
 $git_status\
-[▛](bg:#000 fg:pink))
-[░▒▓](current_line)\
-[$status ($shell)](bg:current_line)\
-[▛](current_line) \
+[▛](bg:#000 fg:flamingo))
+[░▒▓](overlay0)\
+[$status ($shell)](bg:overlay0)\
+[▛](overlay0) \
 """
 [username]
 show_always = true
-style_user = "bg:current_line fg:foreground"
-style_root = "bg:red fg:foreground"
+style_user = "bg:overlay0 fg:text"
+style_root = "bg:red fg:text"
 format = '[$user ]($style)'
 disabled = false
 
 [hostname]
 ssh_symbol = " "
 ssh_only = true
-style = "bg:current_line fg:foreground"
+style = "bg:overlay0 fg:text"
 format = '[$ssh_symbol$hostname ]($style)'
 disabled = false
 
 [os]
-style = "bg:current_line fg:foreground"
+style = "bg:overlay0 fg:text"
 disabled = false
 [os.symbols]
 Alpaquita = " "
@@ -106,13 +106,13 @@ Unknown = " "
 Windows = "󰍲 "
 
 [sudo]
-style = 'bg:current_line fg:pink bold'
+style = 'bg:overlay0 fg:pink bold'
 symbol = ''
 disabled = false
 allow_windows = true
 
 [directory]
-style = "bg:purple fg:background"
+style = "bg:lavender fg:base"
 format = "[$path ]($style)"
 truncation_length = 3
 truncation_symbol = "…/"
@@ -126,17 +126,17 @@ read_only = " 󰌾"
 
 [git_branch]
 symbol = ""
-style = "bg:orange fg:background"
+style = "bg:rosewater fg:base"
 format = '[$symbol $branch ]($style)'
 
 [git_status]
-style = "bg:pink fg:background"
+style = "bg:flamingo fg:base"
 conflicted = '󰞇 '
 up_to_date = ' '
 untracked = ' '
 stashed = ' '
 modified = '󱓥 '
-staged = '[󱫉\($count\)](backgroundn) '
+staged = '[󱫉\($count\)](basen) '
 renamed = ' '
 deleted = ' '
 ahead = '${count} '
@@ -146,118 +146,118 @@ format = '[$all_status$ahead_behind]($style)'
 
 [git_metrics]
 disabled = false
-deleted_style = "bg:current_line fg:red"
-added_style = "bg:current_line fg:green"
+deleted_style = "bg:overlay0 fg:red"
+added_style = "bg:overlay0 fg:green"
 format = '([$added]($added_style))([$deleted]($deleted_style) )'
 
 [c]
 symbol = " "
-style = "bg:cyan fg:background"
+style = "bg:sky fg:base"
 format = '([$symbol($version) ]($style))'
 
 [conda]
 symbol = " "
-style = "bg:cyan fg:background"
+style = "bg:sky fg:base"
 format = '([$symbol($version) ]($style))'
 
 [dart]
 symbol = " "
-style = "bg:cyan fg:background"
+style = "bg:sky fg:base"
 format = '([$symbol($version) ]($style))'
 
 [elixir]
 symbol = " "
-style = "bg:cyan fg:background"
+style = "bg:sky fg:base"
 format = '([$symbol($version) ]($style))'
 
 [elm]
 symbol = " "
-style = "bg:cyan fg:background"
+style = "bg:sky fg:base"
 format = '([$symbol($version) ]($style))'
 
 [golang]
 symbol = " "
-style = "bg:cyan fg:background"
+style = "bg:sky fg:base"
 format = '([$symbol($version) ]($style))'
 
 [haskell]
 symbol = " "
-style = "bg:cyan fg:background"
+style = "bg:sky fg:base"
 format = '([$symbol($version) ]($style))'
 
 [haxe]
 symbol = " "
-style = "bg:cyan fg:background"
+style = "bg:sky fg:base"
 format = '([$symbol($version) ]($style))'
 
 [java]
 symbol = " "
-style = "bg:cyan fg:background"
+style = "bg:sky fg:base"
 format = '([$symbol($version) ]($style))'
 
 [julia]
 symbol = " "
-style = "bg:cyan fg:background"
+style = "bg:sky fg:base"
 format = '([$symbol($version) ]($style))'
 
 [lua]
 symbol = " "
-style = "bg:cyan fg:background"
+style = "bg:sky fg:base"
 format = '([$symbol($version) ]($style))'
 
 [meson]
 symbol = "󰔷 "
-style = "bg:cyan fg:background"
+style = "bg:sky fg:base"
 format = '([$symbol($version) ]($style))'
 
 [nim]
 symbol = "󰆥 "
-style = "bg:cyan fg:background"
+style = "bg:sky fg:base"
 format = '([$symbol($version) ]($style))'
 
 [nix_shell]
 symbol = " "
-style = "bg:cyan fg:background"
+style = "bg:sky fg:base"
 format = '([$symbol($version) ]($style))'
 
 [nodejs]
 symbol = " "
-style = "bg:cyan fg:background"
+style = "bg:sky fg:base"
 format = '([$symbol($version) ]($style))'
 
 [python]
 symbol = " "
-style = "bg:cyan fg:background"
+style = "bg:sky fg:base"
 format = '([$symbol($version) ]($style))'
 
 [rlang]
 symbol = "󰟔 "
-style = "bg:cyan fg:background"
+style = "bg:sky fg:base"
 format = '([$symbol($version) ]($style))'
 
 [ruby]
 symbol = " "
-style = "bg:cyan fg:background"
+style = "bg:sky fg:base"
 format = '([$symbol($version) ]($style))'
 
 [rust]
 symbol = " "
-style = "bg:cyan fg:background"
+style = "bg:sky fg:base"
 format = '([$symbol($version) ]($style))'
 
 [php]
 symbol = " "
-style = "bg:cyan fg:background"
+style = "bg:sky fg:base"
 format = '([$symbol($version) ]($style))'
 
 [scala]
 symbol = " "
-style = "bg:cyan fg:background"
+style = "bg:sky fg:base"
 format = '([$symbol($version) ]($style))'
 
 [package]
 symbol = "󰏗 "
-style = "bg:cyan fg:background"
+style = "bg:sky fg:base"
 format = '([$symbol($version) ]($style))'
 
 [cmd_duration]
@@ -265,25 +265,25 @@ min_time = 1_000
 min_time_to_notify = 30_000
 show_milliseconds = true
 disabled = false
-style = "bg:comment fg:background"
+style = "bg:teal fg:base"
 show_notifications = true
 format = '[󰅒 $duration]($style)'
 
 [status]
 disabled = false
-style = "bg:current_line fg:background"
-symbol = '[󰚌](bg:current_line fg:red)'
-success_symbol = '[󰮭](bg:current_line fg:green)'
+style = "bg:overlay0 fg:base"
+symbol = '[󰚌](bg:overlay0 fg:red)'
+success_symbol = '[󰮭](bg:overlay0 fg:green)'
 format = '[$symbol ]($style)'
 
 [shell]
-style = "bg:current_line"
-cmd_indicator = "[](bg:current_line fg:yellow)"
-bash_indicator = "[](bg:current_line fg:green)"
-fish_indicator = "[󰈺](bg:current_line fg:CYAN)"
-nu_indicator = "[󰫻󰬂](bg:current_line fg:green)"
-powershell_indicator = "[󰨊](bg:current_line fg:blue)"
-unknown_indicator = "[](bg:current_line fg:red)"
+style = "bg:overlay0"
+cmd_indicator = "[](bg:overlay0 fg:yellow)"
+bash_indicator = "[](bg:overlay0 fg:green)"
+fish_indicator = "[󰈺](bg:overlay0 fg:teal)"
+nu_indicator = "[󰫻󰬂](bg:overlay0 fg:green)"
+powershell_indicator = "[󰨊](bg:overlay0 fg:blue)"
+unknown_indicator = "[](bg:overlay0 fg:red)"
 disabled = false
 
 [palettes.catppuccin_mocha]
