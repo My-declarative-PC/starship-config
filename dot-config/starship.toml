@@ -42,7 +42,8 @@ $cmd_duration\
 $git_branch\
 [▒█](bg:rosewater fg:flamingo)\
 $git_status\
-[▛](bg:#000 fg:flamingo))
+[▛](bg:#000 fg:flamingo)\
+)
 [░▒▓](overlay0)\
 [$status ($shell)](bg:overlay0)\
 [▛](overlay0) \
