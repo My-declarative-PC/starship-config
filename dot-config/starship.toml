@@ -2,14 +2,11 @@
 palette = "catppuccin_mocha"
 
 format = """
-[░▒▓](overlay0)\
 $os\
 $username\
 $sudo\
 $hostname\
-[░▒▓](bg:overlay0 fg:lavender)\
 $directory\
-[▒█](bg:lavender fg:sky)\
 $c\
 $conda\
 $dart\
@@ -32,21 +29,13 @@ $rust\
 $php\
 $scala\
 $package\
-[▒█](bg:sky fg:teal)\
 $cmd_duration\
-[▛](bg:#000 fg:teal)\
 (
-[░▒▓](overlay0)\
 [ $git_metrics](bg:overlay0 fg:text)\
-[░▒▓](bg:overlay0 fg:rosewater)\
 $git_branch\
-[▒█](bg:rosewater fg:flamingo)\
 $git_status\
-[▛](bg:#000 fg:flamingo)\
 )
-[░▒▓](overlay0)\
-[$status ($shell)](bg:overlay0)\
-[▛](overlay0) \
+[$status ($shell)](bg:overlay0) \
 """
 [username]
 show_always = true
