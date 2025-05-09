@@ -4,66 +4,67 @@ palette = "catppuccin_mocha"
 format = """
 $os $username ($sudo )($hostname )$directory $cmd_duration\
 (
-[ $git_metrics](bg:overlay0 fg:text) $git_branch $git_status\
+[  $git_metrics](bg:surface0 fg:text) $git_branch $git_status\
 )
-[$status ($shell)](bg:overlay0) \
+([ $shell](bg:surface0) )[$status](bg:surface0) \
 """
 [username]
 show_always = true
-style_user = "bg:overlay0 fg:text"
+style_user = "bg:surface0 fg:text"
 style_root = "bg:red fg:text"
 format = "[ $user ]($style)"
 disabled = false
 
 [hostname]
-ssh_symbol = " "
+ssh_symbol = ""
 ssh_only = true
-style = "bg:overlay0 fg:text"
+style = "bg:surface0 fg:text"
 format = "[$ssh_symbol$hostname ]($style)"
 disabled = false
 
 [os]
-style = "bg:overlay0 fg:text"
+style = "bg:surface0 fg:text"
 disabled = false
+format = "[ $symbol ]($style)"
 [os.symbols]
-Alpine = "  "
-Android = "  "
-Arch = "  "
-Debian = "  "
-Fedora = "  "
-Linux = "  "
-Mint = "  "
-openSUSE = "  "
-Ubuntu = "  "
-Unknown = "  "
+Alpine = ""
+Android = ""
+Arch = ""
+Debian = ""
+Fedora = ""
+Linux = ""
+Mint = ""
+openSUSE = ""
+Ubuntu = ""
+Unknown = ""
 
 [sudo]
-style = "bg:overlay0 fg:pink bold"
+style = "bg:surface0 fg:pink bold"
 symbol = ""
 disabled = false
 allow_windows = true
 format = "[ as $symbol ]($style)"
 
 [directory]
-style = "bg:lavender fg:base"
+style = "bg:surface0 fg:lavender"
 format = "[ $read_only]($read_only_style)[$path ]($style)"
 truncation_length = 3
 truncation_symbol = "…/"
-read_only_style = "bg:lavender fg:red"
+read_only_style = "bg:surface0 fg:red"
 read_only = "󰌾"
 
 [directory.substitutions]
-"Documents" = "󰈙 "
-"Downloads" = " "
-"Music" = " "
-"Pictures" = " "
+"Documents" = "󰈙"
+"Downloads" = ""
 "gits" = ""
+"home" = ""
+"Music" = ""
+"Pictures" = ""
 "wgits" = ""
 
 [git_branch]
-symbol = ""
-style = "bg:rosewater fg:base"
-format = "[$symbol $branch ]($style)"
+style = "bg:surface0 fg:rosewater"
+format = "[ $branch ]($style)"
 
 [git_status]
 style = "bg:flamingo fg:base"
@@ -82,8 +83,8 @@ format = "[$all_status$ahead_behind]($style)"
 
 [git_metrics]
 disabled = false
-deleted_style = "bg:overlay0 fg:red"
-added_style = "bg:overlay0 fg:green"
+deleted_style = "bg:surface0 fg:red"
+added_style = "bg:surface0 fg:green"
 format = "([$added]($added_style))([$deleted]($deleted_style) )"
 
 [cmd_duration]
@@ -91,23 +92,22 @@ min_time = 1_000
 min_time_to_notify = 30_000
 show_milliseconds = true
 disabled = false
-style = "bg:teal fg:base"
+style = "bg:surface0 fg:teal"
 show_notifications = true
-format = "[ 󰅒 $duration ]($style)"
+format = "[ 󰅒$duration ]($style)"
 
 [status]
 disabled = false
-style = "bg:overlay0 fg:base"
-symbol = "[󰚌](bg:overlay0 fg:red)"
-success_symbol = "[󰮭](bg:overlay0 fg:green)"
-format = "[$symbol ]($style)"
+symbol = "[ 󰚌 ](bg:red fg:base)"
+success_symbol = "[  ](bg:surface0 fg:green)"
+format = "[$symbol]($style)"
 
 [shell]
-style = "bg:overlay0"
-cmd_indicator = "[](bg:overlay0 fg:yellow)"
-bash_indicator = "[](bg:overlay0 fg:green)"
-fish_indicator = "[󰈺](bg:overlay0 fg:teal)"
-unknown_indicator = "[](bg:overlay0 fg:red)"
+style = "bg:surface0"
+cmd_indicator = "[](bg:surface0 fg:yellow)"
+bash_indicator = "[](bg:surface0 fg:green)"
+fish_indicator = "[󰈺](bg:surface0 fg:teal)"
+unknown_indicator = "[](bg:surface0 fg:red)"
 disabled = false
 
 [palettes.catppuccin_mocha]
