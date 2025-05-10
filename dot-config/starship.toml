@@ -76,9 +76,9 @@ modified = "󱓥 "
 staged = "[󱫉\\($count\\)](basen) "
 renamed = " "
 deleted = " "
-ahead = "[${count}](bg:surface0 fg:green) "
-diverged = "[${ahead_count}](bg:surface0 fg:green)[${behind_count}](bg:surface0 fg:red) "
-behind = "[${count}](bg:surface0 fg:red) "
+ahead = "[](bg:surface0 fg:green)${count} "
+diverged = "[](bg:surface0 fg:green)${ahead_count}[](bg:surface0 fg:red)${behind_count} "
+behind = "[](bg:surface0 fg:red)${count} "
 format = "[ $all_status$ahead_behind]($style)"
 
 [git_metrics]
