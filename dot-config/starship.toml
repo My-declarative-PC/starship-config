@@ -2,7 +2,7 @@
 palette = "catppuccin_mocha"
 
 format = """
-$os $username ($sudo )($hostname )$directory $cmd_duration\
+$os $username ($sudo )($hostname )$directory( $direnv)( $cmd_duration)\
 (
 [  ](bg:surface0 fg:text) $git_branch$git_metrics $git_status\
 )
@@ -114,6 +114,18 @@ bash_indicator = "[](bg:surface0 fg:green)"
 fish_indicator = "[󰈺](bg:surface0 fg:teal)"
 unknown_indicator = "[](bg:surface0 fg:red)"
 disabled = false
+
+[direnv]
+disabled = false
+style = "bg:surface0 fg:yellow"
+symbol = "."
+allowed_msg = ""
+not_allowed_msg = ""
+denied_msg = ""
+loaded_msg = ""
+unloaded_msg = ""
+detect_files = [ ".envrc" ]
+format = "[ $symbol $loaded/$allowed ]($style)"
 
 [palettes.catppuccin_mocha]
 rosewater = "#f5e0dc"
