@@ -58,6 +58,7 @@ read_only = "󰌾"
 home_symbol = ""
 
 [directory.substitutions]
+".config" = "."
 "Documents" = "󰈙"
 "Downloads" = ""
 "gits" = ""
