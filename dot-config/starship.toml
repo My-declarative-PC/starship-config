@@ -4,7 +4,7 @@ palette = "catppuccin_mocha"
 format = """
 $os $username ($sudo )($hostname )$directory $cmd_duration\
 (
-[  $git_metrics](bg:surface0 fg:text) $git_branch $git_status\
+[  ](bg:surface0 fg:text) $git_branch$git_metrics $git_status\
 )
 ([ $shell](bg:surface0) )[$status](bg:surface0) \
 """
@@ -48,7 +48,7 @@ format = "[ as $symbol ]($style)"
 [directory]
 style = "bg:surface0 fg:lavender"
 format = "[ $read_only]($read_only_style)[$path ]($style)"
-truncation_length = 3
+truncation_length = 5
 truncation_symbol = "…/"
 read_only_style = "bg:surface0 fg:red"
 read_only = "󰌾"
@@ -67,25 +67,25 @@ style = "bg:surface0 fg:rosewater"
 format = "[ $branch ]($style)"
 
 [git_status]
-style = "bg:flamingo fg:base"
-conflicted = "󰞇 "
-up_to_date = " "
-untracked = " "
+style = "bg:surface0 fg:flamingo"
+conflicted = "[󰞇](bg:surface0 fg:red) "
+up_to_date = "[](bg:surface0 fg:green) "
+untracked = "[](bg:overlay0 fg:green) "
 stashed = " "
 modified = "󱓥 "
-staged = '[󱫉\($count\)](basen) '
+staged = "[󱫉\\($count\\)](basen) "
 renamed = " "
 deleted = " "
-ahead = "${count} "
-diverged = "${ahead_count}${behind_count} "
-behind = "${count} "
-format = "[$all_status$ahead_behind]($style)"
+ahead = "[${count}](bg:surface0 fg:green) "
+diverged = "[${ahead_count}](bg:surface0 fg:green)[${behind_count}](bg:surface0 fg:red) "
+behind = "[${count}](bg:surface0 fg:red) "
+format = "[ $all_status$ahead_behind]($style)"
 
 [git_metrics]
 disabled = false
 deleted_style = "bg:surface0 fg:red"
 added_style = "bg:surface0 fg:green"
-format = "([$added]($added_style))([$deleted]($deleted_style) )"
+format = "([$added ]($added_style))([$deleted ]($deleted_style))"
 
 [cmd_duration]
 min_time = 1_000
