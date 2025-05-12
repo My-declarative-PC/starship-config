@@ -47,13 +47,14 @@ format = "[ as $symbol ]($style)"
 
 [directory]
 style = "bg:surface0 fg:lavender"
+before_repo_root_style = "bg:surface0 fg:blue italic"
+repo_root_style = "bg:surface0 fg:flamingo"
+read_only_style = "bg:surface0 fg:red"
 format = "[ $read_only]($read_only_style)[$path ]($style)"
 repo_root_format = "[ $read_only]($read_only_style)[$before_root_path]($before_repo_root_style)[$repo_root]($repo_root_style)[$path ]($style)"
 truncation_length = 5
 truncation_symbol = "…/"
 truncate_to_repo = false
-repo_root_style = "bg:surface0 fg:flamingo"
-read_only_style = "bg:surface0 fg:red"
 read_only = "󰌾"
 home_symbol = ""
 
