@@ -62,11 +62,11 @@ home_symbol = ""
 ".config" = "."
 "Documents" = "󰈙"
 "Downloads" = ""
+"wgits" = ""
 "gits" = ""
 "home" = ""
 "Music" = ""
 "Pictures" = ""
-"wgits" = ""
 
 [git_branch]
 style = "bg:surface0 fg:rosewater"
