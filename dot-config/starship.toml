@@ -2,7 +2,7 @@
 palette = "catppuccin_mocha"
 
 format = """
-$os $username ($sudo )($hostname )$directory( $direnv)( $cmd_duration)\
+$os ([($username)($sudo)($hostname)](bg:surface0) )$directory( $direnv)( $cmd_duration)\
 (
 [  ](bg:surface0 fg:text) $git_branch$git_metrics $git_status\
 )
@@ -16,10 +16,10 @@ format = "[ $user ]($style)"
 disabled = false
 
 [hostname]
-ssh_symbol = ""
+ssh_symbol = "[](bg:surface0 fg:sky)"
 ssh_only = true
-style = "bg:surface0 fg:text"
-format = "[$ssh_symbol$hostname ]($style)"
+style = "bg:surface0 fg:maroon"
+format = "[in $ssh_symbol [$hostname](bg:surface0 fg:red bold) ]($style)"
 disabled = false
 
 [os]
@@ -43,7 +43,7 @@ style = "bg:surface0 fg:pink bold"
 symbol = ""
 disabled = false
 allow_windows = true
-format = "[ as $symbol ]($style)"
+format = "[as $symbol ]($style)"
 
 [directory]
 style = "bg:surface0 fg:lavender"
